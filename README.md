@@ -67,6 +67,7 @@ NN 在 swap 开（BlitPass `FilterMode.Point`）与 swap 关（PostProcessPass P
 
 - MSAA 必须保持 Disabled（URP Asset `m_MSAA: 1`），或仅在RenderScale ！= 1时使用
 - 非 swap buffer 模式下 Gamma 矫正不可用（实现依赖 swap buffer 合成路径）。
+- **FSR 未支持**（源版即未放行，选项会退化为 Bilinear）
 - 渲染到 RT / XR 未适配（`BlitPass` 等处仍按屏幕尺寸处理）。
 - TMP 仅覆盖 `TMP_SDF-Mobile` 一个 shader；Overlay / SSD 等 variant 未接 Gamma 链路。
 
